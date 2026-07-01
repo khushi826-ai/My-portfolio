@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Jha - Creative Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.5;
+            padding: 30px 15px;
+        }
+
+        /* Resume Grid Container */
+        .resume-container {
+            max-width: 850px;
+            background: #fff;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 32% 68%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Left Column (Colorful Sidebar) */
+        .sidebar {
+            background: linear-gradient(135deg, #2e1a47, #1a0f2e); /* Deep Creative Purple */
+            color: #fff;
+            padding: 35px 25px;
+        }
+
+        .profile-section {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
+        }
+
+        .profile-section h1 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #00f2fe; /* Vibrant Cyan/Teal Accent */
+            margin-bottom: 5px;
+        }
+
+        .profile-section p {
+            font-size: 0.85rem;
+            color: #dfd7ee;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-heading {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #00f2fe;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #00f2fe;
+            padding-bottom: 5px;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+
+        .contact-list li {
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            color: #e5e0ee;
+            word-break: break-all;
+        }
+
+        .contact-list a {
+            color: #00f2fe;
+            text-decoration: none;
+        }
+
+        .skill-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            border-radius: 20px;
+            color: #fff;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        /* Right Column (Main Content) */
+        .main-content {
+            padding: 40px;
+            background: #fff;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .section-heading {
+            font-size: 1.2rem;
+            color: #2e1a47;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e0dbec;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .summary-text {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Project & Education Styling */
+        .card-item {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #2e1a47;
+        }
+
+        .card-date {
+            font-size: 0.8rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: #6c5a85;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .card-item ul {
+            margin-left: 18px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .card-item ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Action Footer */
+        .action-bar {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #2e1a47, #00f2fe);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(46, 26, 71, 0.2);
+            transition: 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+        }
+
+        /* Print Settings to preserve background colors */
+        @media print {
+            body { background: #fff; padding: 0; }
+            .resume-container { box-shadow: none; grid-template-columns: 32% 68%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .sidebar { background: #2e1a47 !important; color: #fff !important; }
+            .action-bar { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- Left Sidebar (Color Block) -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1>Khushi Jha</h1>
+                <p>Developer & Designer</p>
+            </div>
+
+            <h3 class="sidebar-heading">Contact</h3>
+            <ul class="contact-list">
+                <li>📍 New Delhi, India</li>
+                <li>📞 +91 9958471178</li>
+                <li>✉️ <a href="mailto:jhachanda153@gmail.com">jhachanda153@gmail.com</a></li>
+                <li>🌐 <a href="https://github.io" target="_blank">Portfolio Site</a></li>
+            </ul>
+
+            <h3 class="sidebar-heading">Tech Skills</h3>
+            <div class="skill-badge-container">
+                <div class="skill-badge">HTML5</div>
+                <div class="skill-badge">CSS3</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">React</div>
+                <div class="skill-badge">MySQL</div>
+            </div>
+
+            <h3 class="sidebar-heading">Design Tools</h3>
+            <div class="skill-badge-container">
+                <div class="skill-badge">Adobe XD</div>
+                <div class="skill-badge">Photoshop</div>
+                <div class="skill-badge">Graphic Design</div>
+                <div class="skill-badge">UI Layouts</div>
+            </div>
+
+            <h3 class="sidebar-heading">Tools</h3>
+            <div class="skill-badge-container">
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">GitHub</div>
+                <div class="skill-badge">MS Excel</div>
+            </div>
+        </aside>
+
+        <!-- Right Main Content -->
+        <main class="main-content">
+            
+            <!-- Summary -->
+            <section>
+                <h2 class="section-heading">Professional Summary</h2>
+                <p class="summary-text">
+                    Passionate and detail-oriented Full Stack Developer and Graphic Designer with a strong foundation in building responsive web applications and creating intuitive visual designs. Skilled in combining front-end development technologies with modern UI/UX methodologies to deliver high-quality, user-centric web platforms.
+                </p>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2 class="section-heading">Academic Projects</h2>
+                
+                <div class="card-item">
+                    <div class="card-header">
+                        <span class="card-title">E-Commerce Web Application</span>
+                    </div>
+                    <ul>
+                        <li>Developed a fully functional online retail store featuring a dynamic shopping cart and a secure user checkout interface.</li>
+                        <li>Implemented modern CSS and flexible grid layouts to ensure 100% responsiveness across all mobile and desktop devices.</li>
+                    </ul>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-header">
+                        <span class="card-title">Weather Forecasting App</span>
+                    </div>
+                    <ul>
+                        <li>Engineered a real-time weather forecasting application by successfully integrating and fetching data from third-party live Weather APIs.</li>
+                        <li>Designed a clean, interactive user interface to display weather parameters and regional forecasts efficiently.</li>
+                    </ul>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-header">
+                        <span class="card-title">Task Manager (Productivity App)</span>
+                    </div>
+                    <ul>
+                        <li>Built a dynamic productivity application tailored to managing, organizing, and prioritizing daily workflows and tasks.</li>
+                        <li>Integrated browser-based Local Storage to ensure robust, persistent client-side data retention.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2 class="section-heading">Education</h2>
+                
+                <div class="card-item">
+                    <div class="card-header">
+                        <span class="card-title">Bachelor of Arts (B.A.) — 3rd Year</span>
